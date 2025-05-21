@@ -41,6 +41,7 @@ xvfb-run -a -- ./lib4bin -p -v -s -e -k ./bin/chrome -- google.com --no-sandbox
 	/usr/lib/libgtk* \
 	/usr/lib/libcloudproviders* \
 	/usr/lib/libGLX* \
+	/usr/lib/libOpenGL.so* \
 	/usr/lib/libxcb-glx* \
 	/usr/lib/libXcursor.so.1 \
 	/usr/lib/libXinerama* \
@@ -51,7 +52,7 @@ xvfb-run -a -- ./lib4bin -p -v -s -e -k ./bin/chrome -- google.com --no-sandbox
 	/usr/lib/gvfs/* \
 	/usr/lib/gio/modules/* \
 	/usr/lib/dri/* \
-	/usr/lib/gbm/* \
+	/usr/lib/vdpau/* \
 	/usr/lib/pulseaudio/* \
 	/usr/lib/alsa-lib/*
 
