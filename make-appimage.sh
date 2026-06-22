@@ -13,16 +13,14 @@ export DEPLOY_PIPEWIRE=1
 export DEPLOY_QT=1
 export DEPLOY_P11KIT=1
 export URUNTIME_PRELOAD=1 # really needed here
+export STRACE_BINARY=chrome
+export STRACE_FLAGS='google.com --no-sandbox'
 
 wget https://raw.githubusercontent.com/Samueru-sama/Anylinux-AppImages/refs/heads/main/useful-tools/quick-sharun.sh -O /usr/local/bin/quick-sharun
 chmod +x /usr/local/bin/quick-sharun
 
-# strip cromite bundled libs
-strip -s -R .comment --strip-unneeded ./AppDir/bin/lib*.so*
-
 # Deploy dependencies
-quick-sharun ./AppDir/bin/chrome -- google.com --no-sandbox
-STRACE_MODE=0 quick-sharun \
+quick-sharun \
 	./AppDir/bin/chrome*          \
 	./AppDir/bin/libqt6_shim.so*  \
 	/usr/lib/libQt6Widgets.so*    \
