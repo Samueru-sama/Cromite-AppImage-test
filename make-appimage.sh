@@ -16,9 +16,6 @@ export URUNTIME_PRELOAD=1 # really needed here
 export STRACE_BINARY=chrome
 export STRACE_FLAGS='google.com --no-sandbox'
 
-wget https://raw.githubusercontent.com/Samueru-sama/Anylinux-AppImages/refs/heads/main/useful-tools/quick-sharun.sh -O /usr/local/bin/quick-sharun
-chmod +x /usr/local/bin/quick-sharun
-
 # Deploy dependencies
 quick-sharun \
 	./AppDir/bin/chrome*          \
