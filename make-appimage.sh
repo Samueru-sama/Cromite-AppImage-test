@@ -14,6 +14,9 @@ export DEPLOY_QT=1
 export DEPLOY_P11KIT=1
 export URUNTIME_PRELOAD=1 # really needed here
 
+wget https://raw.githubusercontent.com/Samueru-sama/Anylinux-AppImages/refs/heads/main/useful-tools/quick-sharun.sh -O /usr/local/bin/quick-sharun
+chmod +x /usr/local/bin/quick-sharun
+
 # strip cromite bundled libs
 strip -s -R .comment --strip-unneeded ./AppDir/bin/lib*.so*
 
